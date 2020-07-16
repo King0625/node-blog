@@ -1,8 +1,5 @@
 FROM node:12
 
-# Bundle app source
-COPY . /code
-
 # Create app directory
 WORKDIR /code
 
@@ -14,6 +11,9 @@ COPY package*.json ./
 RUN npm install
 # If you are building your code for production
 # RUN npm ci --only=production
+
+# Bundle app source
+COPY . .
 
 EXPOSE 8080
 
