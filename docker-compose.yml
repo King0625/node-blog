@@ -1,6 +1,7 @@
 version: '3'
 services:
   web:
+    image: kenchen666/node-blog-app 
     build: .
     ports:
       - "8080:8080"
